@@ -1,0 +1,37 @@
+
+.top-banner-block {
+    background: url(/img/top-banner.png);
+    position: absolute;
+    width: 920px;
+    height: 888px;
+    float: right;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    background-size: contain;
+}
+.top-block-title {
+    position: absolute;
+    font-size: 60px;
+    width: 544px;
+    height: 192px;
+    float: left;
+    left: 160px;
+    top: 272px;
+    z-index: 1;
+}
+#title-big {
+    font-family: Inter-UI;
+    font-weight: 700;
+}
+#title-description {
+    font-family: Inter-UI;
+    font-weight: 300;
+    font-style: normal;
+    width: 384px;
+    height: 96px;
+    font-size: 18px !important;
+    color: #6E6F7A;
+    padding-block-start: 32px;
+    margin: 0px;
+}

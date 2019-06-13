@@ -1,5 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const CopyWebpackPlugin= require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -16,9 +18,27 @@ module.exports = {
           use: ['css-loader', 'sass-loader']
         })
       }
-    ]
+    ],
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
-  ]
+    new ExtractTextPlugin('style.css'),
+    new HtmlWebpackPlugin({
+      template: __dirname + "/index.html",
+      inject: 'body',
+    }),
+    new CopyWebpackPlugin([{
+      from: './src/fonts',
+      to: './fonts'
+    },
+    {
+      from: './src/img',
+      to: './img'
+    }
+  ])
+
+  ],
+  devServer: {  // configuration for webpack-dev-server
+      contentBase: './src/public',  //source of static assets
+      port: 7700, // port to run dev-server
+  } 
 };
