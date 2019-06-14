@@ -1,38 +1,3 @@
-.top-banner-block {
-  background: url(/img/top-banner.png);
-  position: absolute;
-  width: 920px;
-  height: 888px;
-  float: right;
-  top: 0px;
-  right: 0px;
-  z-index: 1;
-  background-size: contain; }
-
-.top-block-title {
-  position: absolute;
-  font-size: 60px;
-  width: 544px;
-  height: 192px;
-  float: left;
-  left: 160px;
-  top: 272px;
-  z-index: 1; }
-
-#title-big {
-  font-family: Inter-UI;
-  font-weight: 700; }
-
-#title-description {
-  font-family: Inter-UI;
-  font-weight: 300;
-  font-style: normal;
-  width: 384px;
-  height: 96px;
-  font-size: 18px !important;
-  color: #6E6F7A;
-  padding-block-start: 32px;
-  margin: 0px; }
 @font-face {
   font-family: Roboto;
   src: url(/fonts/OpenSans-Bold.ttf);
@@ -57,10 +22,16 @@
   font-weight: 700;
   font-style: normal; }
 
+@font-face {
+  font-family: Inter-UI;
+  src: url(/fonts/Inter-MediumItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
 header {
   height: 54px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 212px;
+  padding-right: 212px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,3 +81,192 @@ a {
   font-family: Inter-UI,'Open Sans', normal;
   color: white;
   text-decoration: none; }
+.top-banner-block {
+  background: url(/img/top-banner.png);
+  position: absolute;
+  width: 1183px;
+  height: 1141px;
+  float: right;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  background-size: contain; }
+
+.top-block-title {
+  position: absolute;
+  font-size: 80px;
+  width: 706px;
+  height: 288px;
+  float: left;
+  left: 212px;
+  top: 360px;
+  z-index: 1; }
+
+#title-big {
+  font-family: Inter-UI;
+  font-weight: 700; }
+
+#title-description {
+  font-family: Inter-UI;
+  font-weight: 300;
+  font-style: normal;
+  width: 521px;
+  height: 64px;
+  font-size: 24px !important;
+  color: #6E6F7A;
+  padding-block-start: 32px;
+  margin: 0px; }
+
+.top-banner {
+  height: 1080px;
+  width: 100%; }
+
+.slider-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  align-items: flex-start;
+  width: 1496px;
+  height: 147px;
+  padding-top: 213px;
+  padding-left: 212px;
+  padding-right: 212px; }
+
+#title {
+  font-family: Inter-UI;
+  font-weight: 700;
+  font-size: 40px; }
+
+#slider-text {
+  font-family: Inter-UI;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  padding-left: 134px;
+  width: 856px;
+  height: 96px; }
+
+#slider-author {
+  padding-top: 32px;
+  font-family: Inter-UI;
+  font-weight: 400;
+  color: #6E6F7A;
+  font-size: 16px; }
+
+.models {
+  padding-top: 210px;
+  padding-left: 212px;
+  padding-right: 212px;
+  width: 1496px;
+  height: 1144px; }
+
+.models-block {
+  width: 1496px;
+  height: 1144px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.model-card {
+  padding-top: 80px;
+  width: 740px;
+  height: 520px; }
+
+.card-image {
+  width: 728px;
+  height: 320px; }
+
+.subtitle {
+  padding-top: 32px;
+  font-family: Inter-UI;
+  font-weight: 700;
+  font-size: 24px; }
+
+.text {
+  padding-top: 32px;
+  font-family: Inter-UI;
+  font-weight: 400;
+  color: #6E6F7A;
+  font-size: 16px;
+  padding-bottom: 24px; }
+
+.button {
+  text-decoration: none;
+  width: 220px;
+  height: 48px;
+  background: #2A4BFF;
+  border-radius: 8px;
+  padding: 14px 65px; }
+
+.consulting {
+  padding-top: 200px;
+  padding-left: 212px;
+  padding-right: 212px;
+  width: 1496px;
+  height: 744px; }
+
+.consulting-block {
+  width: 1496px;
+  height: 520px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.consult-card {
+  padding-top: 80px;
+  width: 472px;
+  height: 520px; }
+
+.consult-card-image {
+  width: 472px;
+  height: 320px; }
+
+.line {
+  margin-top: 48px;
+  width: 1496px;
+  height: 1px;
+  opacity: 0.4;
+  background: #979CAA; }
+
+.additional-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+  height: 48px;
+  padding-top: 48px; }
+
+#addtitional-text {
+  width: 858px;
+  height: 48px; }
+
+#addtitonal-button {
+  text-decoration: none;
+  width: 220px;
+  height: 48px;
+  background: #2A4BFF;
+  border-radius: 8px;
+  padding: 14px 65px; }
+
+.about {
+  width: 1708px;
+  height: 738px;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.what-we-do-banner {
+  background: url(/img/what-we-do.png);
+  width: 984px;
+  height: 738px;
+  float: left; }
+
+#about-information {
+  padding-top: 189px; }
+
+#about-text {
+  width: 600px;
+  height: 168px; }

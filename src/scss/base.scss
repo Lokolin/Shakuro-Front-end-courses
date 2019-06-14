@@ -25,11 +25,20 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: Inter-UI;
+    src: url(/fonts/Inter-MediumItalic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+
     
 header {
     height: 54px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 212px;
+    padding-right: 212px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
