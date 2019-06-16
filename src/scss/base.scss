@@ -85,7 +85,7 @@ p {
 .menu {
     font-family: Inter-UI;
     font-weight: 600;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 nav {
@@ -96,4 +96,51 @@ a {
     font-family: Inter-UI,'Open Sans', normal;
     color: white;
     text-decoration: none;
+}
+
+footer {
+    height: 200px;
+    padding-left: 212px;
+    padding-right: 212px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E0F21;
+}
+
+#footer-logo {
+    display: flex;
+    justify-items: center;
+    justify-content: start;
+}
+
+#footer-logo-icon {
+    width: 54px;
+    height: 54px;
+    float: left;
+    border: 8px solid #0078FF;
+    border-radius: 50%;
+    z-index: 100;
+    margin: 0;
+}
+
+#footer-logo-name {
+    color: white;
+    font-family: Roboto, 'Open Sans', normal;
+    padding-left: 20px;
+    bottom: 0;
+    width:130px;
+    height: 54px;
+    float: left;
+    font-size: 24px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
 }
