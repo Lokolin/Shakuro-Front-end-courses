@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 @font-face {
     font-family: Roboto;
     src: url(/fonts/OpenSans-Bold.ttf);
@@ -33,7 +35,10 @@
     font-style: italic;
 }
 
-
+h1, h2 {
+    padding: 0;
+    margin: 0;
+}
     
 header {
     height: 54px;
@@ -43,7 +48,9 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
-    font-family: Inter-UI;
+    font-family: Inter-UI, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 li {
@@ -52,81 +59,82 @@ li {
 }
 
 p {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-#logo {
+.logo {
+    text-decoration: none;
     display: flex;
     align-items: flex-end;
     padding-left: 8px;
 }
    
-#logo-icon {
-    width: 18px;
-    height: 18px;
+.logo-icon {
+    width: 24px;
+    height: 24px;
     float: left;
-    border: 6px solid #0078FF;
+    border: 8px solid $logo-blue;
     border-radius: 50%;
     z-index: 100;
     margin: 0;
 }
 
-#logo-name {
-    font-family: Roboto, 'Open Sans', normal;
+.logo-name {
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: $logo-text;
     padding-left: 5px;
     bottom: 0;
     width:71px;
     float: left;
-    font-size: 10px;
+    font-size: 14px;
     z-index: 100;
-}
-
-.menu {
-    font-family: Inter-UI;
-    font-weight: 600;
-    font-size: 12px;
 }
 
 nav {
     z-index: 100;
 }
 
-a {
-    font-family: Inter-UI,'Open Sans', normal;
-    color: white;
-    text-decoration: none;
-}
-
 footer {
-    height: 200px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     padding-left: 212px;
     padding-right: 212px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    background-color: #0E0F21;
+    background-color: $footer-bg;
 }
 
-#footer-logo {
+.footer-logo {
     display: flex;
     justify-items: center;
     justify-content: start;
 }
 
-#footer-logo-icon {
+.footer-logo-icon {
     width: 54px;
     height: 54px;
     float: left;
-    border: 8px solid #0078FF;
+    border: 8px solid $logo-blue;
     border-radius: 50%;
     z-index: 100;
     margin: 0;
 }
 
-#footer-logo-name {
-    color: white;
-    font-family: Roboto, 'Open Sans', normal;
+a {
+    font-family: Inter-UI, sans-serif;
+    text-decoration: none;
+}
+
+.link {
+    color: #FFFFFF;
+}
+
+.footer-logo-name {
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
     padding-left: 20px;
     bottom: 0;
     width:130px;
@@ -141,6 +149,6 @@ footer {
 }
 
 ul {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
