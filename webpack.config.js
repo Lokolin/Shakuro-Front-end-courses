@@ -26,6 +26,10 @@ module.exports = {
       template: __dirname + "/index.html",
       inject: 'body',
     }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'blog.html',
+      template: 'blog.html'
+    }),
     new CopyWebpackPlugin([{
       from: './src/fonts',
       to: './fonts'
