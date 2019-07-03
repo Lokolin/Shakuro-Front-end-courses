@@ -12,7 +12,7 @@
   color: #000000;
 }
 
-.fa-shopping-cart {
+#mobile-cart {
   display: none;
 }
 .fa-bars {
@@ -129,6 +129,10 @@
     height: 56px;
   }
 
+  .header-content {
+    width: calc(100% -48px);
+  }
+
   header nav li {
     display: flex;
     flex-direction: column;
@@ -151,7 +155,7 @@
     display: none;
   }
 
-  .fa-shopping-cart {
+  #mobile-cart {
     width: 24px;
     height: 24px;
     display: flex;
@@ -188,6 +192,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .footer-logo-icon {

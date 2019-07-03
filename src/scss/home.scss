@@ -12,9 +12,13 @@
   z-index: 1;
   background-size: contain;
 }
+
+#home-cart {
+  color: #ffffff;
+}
+
 .top-block-title {
   position: absolute;
-  // font-size: 80px;
   width: 36%;
   height: 288px;
   float: left;
@@ -32,10 +36,8 @@
   font-weight: 300;
   font-style: normal;
   width: 75%;
-  // height: 64px;
   font-size: 24px;
   color: $text-gray;
-  // padding-block-start: 32px;
   margin: 0;
 }
 
@@ -123,6 +125,8 @@
   text-decoration: none;
   background: $button-blue;
   border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
   padding: 14px 65px;
   color: #ffffff;
   &:active {
@@ -184,7 +188,6 @@
   background: url(/img/what-we-do.png);
   background-repeat: no-repeat;
   width: 57%;
-  // height: 738px;
   background-size: contain;
   float: left;
 }
@@ -193,9 +196,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // padding-top: 189px;
+  align-items: flex-start;
   width: 35%;
-  // padding-right: 212px;
 }
 
 .about-text {
@@ -219,7 +221,7 @@
 }
 
 .article-card {
-  width: calc(100% / 4 - 40px);
+  width: calc(100% / 4 - 30px);
   height: 385px;
 }
 
@@ -227,14 +229,4 @@
   width: 100%;
   height: 201px;
   background: url(/img/group.png);
-}
-
-@media screen and (max-width: 767px) {
-}
-
-@media screen and (min-width: 768px) and (max-width: 1164px) {
-  .model-card {
-    padding-top: 80px;
-    width: calc(100% - 40px);
-  }
 }

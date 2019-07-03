@@ -11,18 +11,6 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    // loaders: [
-    //   // the url-loader uses DataUrls.
-    //   // the file-loader emits files.
-    //   {
-    //     test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-    //     loader: 'url-loader?limit=10000&mimetype=application/font-woff',
-    //   },
-    //   {
-    //     test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-    //     loader: 'file-loader',
-    //   },
-    // ],
     rules: [
       {
         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -55,9 +43,16 @@ module.exports = {
       inject: 'body',
     }),
     new HtmlWebpackPlugin({
-      // Also generate a test.html
       filename: 'blog.html',
       template: 'blog.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'store.html',
+      template: 'store.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cheсkout.html',
+      template: 'cheсkout.html',
     }),
     new CopyWebpackPlugin([
       {
@@ -71,8 +66,7 @@ module.exports = {
     ]),
   ],
   devServer: {
-    // configuration for webpack-dev-server
-    contentBase: './src/public', //source of static assets
-    port: 7700, // port to run dev-server
+    contentBase: './src/public',
+    port: 7700,
   },
 };
