@@ -63,6 +63,10 @@ module.exports = {
         from: './src/img',
         to: './img',
       },
+      {
+        from: './src/data',
+        to: './data',
+      },
     ]),
   ],
   devServer: {
