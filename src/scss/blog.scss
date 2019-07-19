@@ -72,14 +72,19 @@
   background: #ffffff;
   border-radius: 8px;
   border: 0px;
-  width: calc(100% / 3 - 40px);
+  width: calc(100% / 3 - 22px);
   margin-bottom: 32px;
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    transition-duration: 0.5s;
   }
 }
 
-.blog-article-card img {
+.blog-article-card a {
+  color: #000000;
+}
+
+.blog-arcticle-image {
   width: 100%;
   border-radius: 8px 8px 0px 0px;
 }
@@ -136,6 +141,7 @@
   header nav li {
     display: flex;
     flex-direction: column;
+    padding: 25px;
   }
 
   .logo {
@@ -232,6 +238,7 @@
   }
 
   .blog-article-card {
-    width: calc(100% / 2 - 24px);
+    width: calc(100% / 2 - 12px);
+    margin-bottom: 24px;
   }
 }

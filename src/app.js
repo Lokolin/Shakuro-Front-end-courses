@@ -5,6 +5,7 @@ import './scss/blog.scss';
 import './scss/store.scss';
 import './scss/checkout.scss';
 import './js/navbar.js';
+import './js/store.js';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
