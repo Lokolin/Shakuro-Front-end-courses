@@ -11,8 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <script type="text/javascript" src="/bundle.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <body class="blog">
     <div class="page-wrapper">
@@ -62,12 +60,7 @@
           <div class="container">
             <div class="blog-top-panel">
               <h2 class="title">Store</h2>
-              <input
-                class="blog-search"
-                id="myInput"
-                onkeyup="storeSearch()"
-                placeholder="Search"
-              />
+              <input class="blog-search" id="myInput" placeholder="Search" />
             </div>
             <div class="blog-articles-block" id="store-items"></div>
           </div>
@@ -115,10 +108,9 @@
       </div>
     </div>
   </body>
-
   <script id="template-list-item" type="text/template">
     <div class="blog-article-card">
-        <a href="#" onclick="getCardInfo(this)">
+        <div href="#" class="cardInfoLink">
           <div class="store-subtitle" id="subtitle">
               {{subtitle}}
           </div>
@@ -129,47 +121,9 @@
           <div class="store-subtitle" id="price">
             $ {{price}}
           </div>
-        </a>
+        </div>
       </div>
   </script>
 
-  <script>
-    function storeSearch() {
-      var input, filter, itemsBlock, item, name, i;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      itemsBlock = document.getElementById('store-items');
-      item = itemsBlock.getElementsByClassName('blog-article-card');
-
-      for (i = 0; i < item.length; i++) {
-        name = item[i].getElementsByTagName('p')[0];
-        if (name.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          item[i].style.display = '';
-        } else {
-          item[i].style.display = 'none';
-        }
-      }
-    }
-
-    function getCardInfo(name) {
-      itemSubtitle = name.querySelector('#subtitle').innerHTML;
-      itemName = name.querySelector('.store-text').innerHTML;
-      itemPrice = name.querySelector('#price').innerHTML;
-      console.log(
-        'Category: ' +
-          itemSubtitle +
-          '\n' +
-          'Item name: ' +
-          itemName +
-          '\n' +
-          'Item price:' +
-          itemPrice,
-      );
-    }
-  </script>
-  <script language="javascript" type="text/javascript">
-    $(window).load(function() {
-      $('#loading').hide();
-    });
-  </script>
+  <script type="text/javascript" src="/bundle.js"></script>
 </html>

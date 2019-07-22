@@ -11,8 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   <link href="style.css" rel="stylesheet"></head>
-  <script type="text/javascript" src="/bundle.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <body class="blog">
     <div class="page-wrapper">
@@ -133,43 +131,9 @@
       </div>
   </script>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/bundle.js"></script>
   <script>
-    function storeSearch() {
-      var input, filter, itemsBlock, item, name, i;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      itemsBlock = document.getElementById('store-items');
-      item = itemsBlock.getElementsByClassName('blog-article-card');
-
-      for (i = 0; i < item.length; i++) {
-        name = item[i].getElementsByTagName('p')[0];
-        if (name.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          item[i].style.display = '';
-        } else {
-          item[i].style.display = 'none';
-        }
-      }
-    }
-
-    function getCardInfo(name) {
-      itemSubtitle = name.querySelector('#subtitle').innerHTML;
-      itemName = name.querySelector('.store-text').innerHTML;
-      itemPrice = name.querySelector('#price').innerHTML;
-      console.log(
-        'Category: ' +
-          itemSubtitle +
-          '\n' +
-          'Item name: ' +
-          itemName +
-          '\n' +
-          'Item price:' +
-          itemPrice,
-      );
-    }
-  </script>
-  <script language="javascript" type="text/javascript">
-    $(window).load(function() {
-      $('#loading').hide();
-    });
+    import { storeSearch, getCardInfo } from './bundle.js';
   </script>
 </html>
