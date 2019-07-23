@@ -11,7 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   <link href="style.css" rel="stylesheet"></head>
-  <script type="text/javascript" src="/bundle.js"></script>
+
   <body class="blog">
     <div class="page-wrapper">
       <header class="white-header" id="header-js">
@@ -24,17 +24,27 @@
               <span class="logo-icon"></span>
               project name
             </a>
-            <i class="fas fa-shopping-cart fa-2x" id="mobile-cart"></i>
+            <a href="cheсkout.html" id="mobile-cart"
+              ><i class="fa" style="font-size:24px">&#xf07a;</i>
+              <span class="badge badge-warning" id="lblCartCount">
+                2
+              </span></a
+            >
             <nav id="js-menu">
               <ul>
-                <li id="nav-li"><a href="#" class="link">MODELS</a></li>
+                <li id="nav-li">
+                  <a href="store.html" class="link">MODELS</a>
+                </li>
                 <li id="nav-li"><a href="#" class="link">CONSULTING</a></li>
                 <li id="nav-li"><a href="#" class="link">ABOUT</a></li>
                 <li id="nav-li"><a href="blog.html" class="link">BLOG</a></li>
                 <li id="nav-li">
-                  <a href="checkout.html">
-                    <i class="fas fa-shopping-cart fa-2x"></i>
-                  </a>
+                  <a href="cheсkout.html"
+                    ><i class="fa" style="font-size:24px">&#xf07a;</i>
+                    <span class="badge badge-warning" id="lblCartCount">
+                      2
+                    </span></a
+                  >
                 </li>
               </ul>
             </nav>
@@ -43,98 +53,21 @@
       </header>
 
       <div class="main-wrapper">
+        <div id="loading">
+          <img id="loading-image" src="img/ajax-loader.gif" alt="Loading..." />
+        </div>
         <section class="blog-arcticles">
           <div class="container">
             <div class="blog-top-panel">
               <h2 class="title">Store</h2>
-              <input class="blog-search" placeholder="Search" />
+              <input
+                class="blog-search"
+                id="myInput"
+                onkeyup="storeSearch()"
+                placeholder="Search"
+              />
             </div>
-            <div class="blog-articles-block">
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Recommend
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-1.png" />
-                <p class="store-text">
-                  Asus ZenFone Go ZB45
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Bestseller
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-2.png" />
-                <p class="store-text">
-                  Xiaomi Mi Band 2
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Goods of the week
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-3.png" />
-                <p class="store-text">
-                  LG 43UH610V
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Recommend
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-4.png" />
-                <p class="store-text">
-                  Electrolux EZB 52410 AK
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Bestseller
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-5.png" />
-                <p class="store-text">
-                  Beats studio wireless
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-              <div class="blog-article-card">
-                <div class="store-subtitle">
-                  Recommend
-                </div>
-                <div class="store-line"></div>
-                <img class="item-image" src="/img/store-6.png" />
-                <p class="store-text">
-                  Nikon D3300 Kit
-                </p>
-                <div class="store-line"></div>
-                <div class="store-subtitle">
-                  $ 384.4
-                </div>
-              </div>
-            </div>
+            <div class="blog-articles-block" id="store-items"></div>
           </div>
         </section>
 
@@ -180,4 +113,27 @@
       </div>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>
+
+  <script id="template-list-item" type="text/template">
+    <div class="blog-article-card">
+        <a href="#" onclick="getCardInfo(this)">
+          <div class="store-subtitle" id="subtitle">
+              {{subtitle}}
+          </div>
+          <img class="item-image" src="{{image}}" />
+          <p class="store-text">
+              {{name}}
+          </p>
+          <div class="store-subtitle" id="price">
+            $ {{price}}
+          </div>
+        </a>
+      </div>
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/bundle.js"></script>
+  <script>
+    import { storeSearch, getCardInfo } from './bundle.js';
+  </script>
 </html>

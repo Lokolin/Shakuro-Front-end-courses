@@ -43,10 +43,8 @@ h2 {
 
 header {
   height: 88px;
-  padding-left: 188px;
-  padding-right: 188px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 10000;
   font-family: Inter-UI, sans-serif;
@@ -62,11 +60,13 @@ header {
   padding-right: 24px;
   box-sizing: border-box;
   outline: none;
+  margin: 0 auto;
 }
 
 li {
   display: inline-block;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 p {
@@ -78,17 +78,17 @@ p {
   text-decoration: none;
   display: flex;
   align-items: flex-end;
-  padding-left: 8px;
+  justify-content: space-between;
   width: 140px;
   font-family: Roboto, sans-serif;
   text-decoration: none;
   color: $logo-text;
-  float: left;
   font-size: 14px;
   text-transform: uppercase;
   z-index: 100;
   &:hover {
     opacity: 0.8;
+    transition-duration: 0.5s;
   }
 }
 
@@ -157,6 +157,7 @@ a {
   color: #ffffff;
   &:hover {
     opacity: 0.7;
+    transition-duration: 0.5s;
   }
 }
 

@@ -14,6 +14,9 @@
   font-weight: 400;
   color: $text-gray;
   text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 24px;
+  border-color: $text-gray;
 }
 
 .store-line {
@@ -27,8 +30,12 @@
 }
 
 .item-image {
+  width: 100%;
   height: 120px;
+  padding-top: 24px;
   object-fit: scale-down;
+  border-top: 1px solid black;
+  border-color: $text-gray;
 }
 
 #lblCartCount {
@@ -50,4 +57,27 @@
 .label-warning[href],
 .badge-warning[href] {
   background-color: #c67605;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
 }
